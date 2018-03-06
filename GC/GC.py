@@ -8,6 +8,7 @@ def parse(fasta, sequences):
             sequences[name] = ""
         else:
             sequences[name] += line.strip()
+    input_file.close()
 
 def seq_gc(seq):
     gc = (seq.count("G") + seq.count("C"))/float(len(seq))
